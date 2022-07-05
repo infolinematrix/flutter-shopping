@@ -38,19 +38,19 @@ Engine • revision a9d88a4d18
 Tools • Dart 2.13.0
 ```
 
-## 后续计划
-- [ ] 从 provider 迁移到 getx
-- [x] 整理项目文件夹，优化代码
-- [x] 完成登录页面
-- [x] 完成个人中心页
+## Follow-up plans
+- [ ] Migrate from provider to getx
+- [x] Organize project folders, optimize code
+- [x] Complete the login page
+- [x] Complete personal hub page
 
-## 回馈和建议
+## Feedback and suggestions
 
-如果你有更好的想法或者你想参与到这个项目中来，欢迎提交 PR!!
+If you have better ideas or you want to get involved in this project, please submit a PR!!
 
-## 预览
+## preview
 
-部分页面效果如下：
+The effect of some pages is as follows:
 
 | ![](./screenshot/Screenshot_1.png)  | ![](./screenshot/Screenshot_2.png)  | ![](./screenshot/Screenshot_3.png)  | ![](./screenshot/Screenshot_4.png)  |
 | :---------------------------------: | :---------------------------------: | :---------------------------------: | :---------------------------------: |
