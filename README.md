@@ -16,20 +16,24 @@ Language: 中文简体 | [English](README-EN.md)
 -  ~~项目采用了mock 接口，目前mock接口已挂，正在修复中...~~(已修复)
 
 
-已有的功能有：
+update record
+Add Android APP icon
+Migrated to empty safe version
+add apk file
+The project uses a mock interface. Currently, the mock interface has been suspended and is being repaired... (repaired)
+The existing functions are:
 
-- [x] 完整的电商购物流程
-- [x] 分类页面左右动画联动
-- [x] 使用 provider (5.x 版本)做状态管理
-- [x] 基于 dio （4.x 版本）的网络请求封装
-- [x] 输入框等部件的处理封装
-- [x] 下拉刷新 + 上拉加载更多
-- [x] 自定义 Dialog
+ Complete e-commerce shopping process
+ Left and right animation linkage of category page
+ Use provider (version 5.x) for state management
+ Network request encapsulation based on dio (version 4.x)
+ Processing package of components such as input boxes
+ Pull down to refresh + pull up to load more
+ Customize Dialog
+By setting, modifying, combining built-in components and customizing to achieve specific design effects to meet the needs of daily development.
+This project is still iterating, if you like it, give it a small star2star2
 
-通过设置、修改、组合自带部件以及自定义来实现具体的设计效果，满足日常开发的需求。  
-**这个项目还在持续迭代中，喜欢就给个小 🌟🌟 吧**
-
-## 项目运行环境
+Project operating environment
 
 ```
 Flutter 2.2.0 • channel stable • https://github.com/flutter/flutter.git
