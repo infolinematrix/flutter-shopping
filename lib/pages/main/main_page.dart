@@ -1,12 +1,11 @@
-import 'package:AiRi/pages/main/components/my_bottom_navigation_bar.dart';
-import 'package:AiRi/pages/manage/manage_page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-import 'package:AiRi/pages/category/category_page.dart';
-import 'package:AiRi/pages/order/order_page.dart';
 import 'package:AiRi/utils/my_navigator.dart';
+import '../category/category_page.dart';
 import '../home/home_page.dart';
+import '../manage/manage_page.dart';
+import '../order/order_page.dart';
+import 'components/my_bottom_navigation_bar.dart';
 import 'store/main_provider.dart';
 
 class MainPage extends StatefulWidget {
@@ -14,7 +13,8 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> with AutomaticKeepAliveClientMixin {
+class _MainPageState extends State<MainPage>
+    with AutomaticKeepAliveClientMixin {
   @override
   void initState() {
     super.initState();
@@ -33,22 +33,43 @@ class _MainPageState extends State<MainPage> with AutomaticKeepAliveClientMixin 
     // 保存 ctx
     MyNavigator.ctx = context;
 
-    /// 根据iphone X 高度适配,高度去掉 顶部、底部
-    return ScreenUtilInit(
-      designSize: Size(375, 812 - 44 - 34),
-      builder: () => Scaffold(
-        backgroundColor: Color(0xfffefefe),
-        bottomNavigationBar: MyBottomNavigationBar(onTap: (index) {
-          mainState.tabBarPageController.jumpToPage(index);
-          setState(() {
-            mainState.setTabBarSelectedIndex = index;
-          });
-        }),
-        body: PageView(
-          controller: mainState.tabBarPageController,
-          children: <Widget>[HomePage(), CategoryPage(), OrderPage(), ManagePage()],
-          physics: NeverScrollableScrollPhysics(),
-        ),
+    /// According to the height of iphone X, the height is removed from the top and bottom
+    // return ScreenUtilInit(
+    //   designSize: Size(375, 812 - 44 - 34),
+    //   builder: () => Scaffold(
+    //     backgroundColor: Color(0xfffefefe),
+    //     bottomNavigationBar: MyBottomNavigationBar(onTap: (index) {
+    //       mainState.tabBarPageController.jumpToPage(index);
+    //       setState(() {
+    //         mainState.setTabBarSelectedIndex = index;
+    //       });
+
+    //     }),
+    //     body: PageView(
+    //       controller: mainState.tabBarPageController,
+    //       children: <Widget>[HomePage(), CategoryPage(), OrderPage(), ManagePage()],
+    //       physics: NeverScrollableScrollPhysics(),
+    //     ),
+    //   ),
+    // );
+
+    return Scaffold(
+      backgroundColor: Color(0xfffefefe),
+      bottomNavigationBar: MyBottomNavigationBar(onTap: (index) {
+        mainState.tabBarPageController.jumpToPage(index);
+        setState(() {
+          mainState.setTabBarSelectedIndex = index;
+        });
+      }),
+      body: PageView(
+        controller: mainState.tabBarPageController,
+        children: <Widget>[
+          HomePage(),
+          CategoryPage(),
+          OrderPage(),
+          ManagePage()
+        ],
+        physics: NeverScrollableScrollPhysics(),
       ),
     );
   }
