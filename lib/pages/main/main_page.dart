@@ -33,7 +33,7 @@ class _MainPageState extends State<MainPage>
     // 保存 ctx
     MyNavigator.ctx = context;
 
-    /// According to the height of iphone X, the height is removed from the top and bottom
+    /// According to -the height of iphone X, the height is removed from the top and bottom
     // return ScreenUtilInit(
     //   designSize: Size(375, 812 - 44 - 34),
     //   builder: () => Scaffold(
