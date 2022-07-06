@@ -22,7 +22,7 @@ class _MainPageState extends State<MainPage>
     hideScreen();
   }
 
-  ///hide your splash screen..Subha
+  ///hide your splash screen..Subha --
   ///
   Future<void> hideScreen() async {
     Future.delayed(Duration(milliseconds: 750), () {});
