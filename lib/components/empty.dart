@@ -50,10 +50,21 @@ class Empty extends StatelessWidget {
             Container(
               width: 120,
               height: 40.5,
-              child: OutlineButton(
+              child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      side: BorderSide.none,
+                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                  side: BorderSide(
+                    width: 2,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
+                  // highlightElevation: 5.0,
+                  // splashColor: AppColors.splashColor,
+                ),
                 onPressed: () => buttonTap,
-                borderSide: BorderSide(color: AppColors.primaryColor),
-                splashColor: AppColors.primaryColor,
+                // borderSide: BorderSide(color: AppColors.primaryColor),
+                // splashColor: AppColors.primaryColor,
                 child: Center(
                   child: Text(
                     buttonText,

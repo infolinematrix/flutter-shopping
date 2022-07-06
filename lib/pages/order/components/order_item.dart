@@ -309,13 +309,19 @@ class Bottom extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                OutlineButton(
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        side: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                    side: BorderSide(
+                      width: 2,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                    // highlightElevation: 5.0,
+                    // splashColor: AppColors.splashColor,
+                  ),
                   onPressed: () {},
-                  highlightElevation: 5.0,
-                  splashColor: AppColors.splashColor,
                   child: Center(
                     child: Text(
                       '联系客服',
@@ -327,13 +333,21 @@ class Bottom extends StatelessWidget {
                     ),
                   ),
                 ),
-                OutlineButton(
-                  shape: RoundedRectangleBorder(
-                      side: BorderSide.none,
-                      borderRadius: BorderRadius.all(Radius.circular(50))),
+                OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        side: BorderSide.none,
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                    side: BorderSide(
+                      width: 2,
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                    // highlightElevation: 5.0,
+                    // splashColor: AppColors.splashColor,
+                  ),
                   onPressed: () => _showCancelDialog(context),
-                  splashColor: AppColors.splashColor,
-                  highlightElevation: 5.0,
+                  // splashColor: AppColors.splashColor,
+                  // highlightElevation: 5.0,
                   child: Center(
                     child: Text(
                       '取消订单',
@@ -347,12 +361,20 @@ class Bottom extends StatelessWidget {
                 ),
                 Container(
                   decoration: BoxDecoration(),
-                  child: FlatButton(
-                    shape: RoundedRectangleBorder(
-                        side: BorderSide.none,
-                        borderRadius: BorderRadius.all(Radius.circular(50))),
+                  color: AppColors.primaryColor,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                          side: BorderSide.none,
+                          borderRadius: BorderRadius.all(Radius.circular(50))),
+                      side: BorderSide(
+                        width: 2,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      // highlightElevation: 5.0,
+                      // splashColor: AppColors.splashColor,
+                    ),
                     onPressed: () => MyNavigator.push(PayPage(orderId: "id")),
-                    color: AppColors.primaryColor,
                     child: Center(
                       child: Text(
                         '立即支付',
