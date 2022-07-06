@@ -8,6 +8,13 @@ class Iconfont {
     matchTextDirection: true,
   );
 
+  // iconName:
+  static const demo = IconData(
+    0xeea3,
+    fontFamily: 'Iconfont',
+    matchTextDirection: true,
+  );
+
   // iconName: ticket_fill
   static const ticket_fill = IconData(
     0xe800,

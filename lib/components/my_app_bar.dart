@@ -57,7 +57,8 @@ class AppBarBack extends StatelessWidget {
       },
       child: _backType == AppBarBackType.Close
           ? Container(
-              child: Icon(Icons.close, color: color ?? Color(0xFF222222), size: 24.0),
+              child: Icon(Icons.close,
+                  color: color ?? Color(0xFF222222), size: 24.0),
             )
           : Container(
               padding: EdgeInsets.only(right: 15),
@@ -79,6 +80,9 @@ class MyTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(_title,
-        style: TextStyle(color: color ?? AppColors.primaryText, fontSize: 16, fontWeight: FontWeight.w500));
+        style: TextStyle(
+            color: color ?? AppColors.primaryText,
+            fontSize: 16,
+            fontWeight: FontWeight.w800));
   }
 }

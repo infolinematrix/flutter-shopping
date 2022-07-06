@@ -1,4 +1,3 @@
-
 import 'package:AiRi/components/components.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +29,7 @@ class _HomePageState extends State<HomePage>
       child: BaseScaffold(
         leadType: AppBarBackType.None,
         actions: <Widget>[AppBarShopCartIconButton()],
-        title: '首页',
+        title: 'Home',
         centerTitle: true,
         body: HomePageContainer(),
       ),
@@ -66,7 +65,7 @@ class _HomePageContainerState extends State<HomePageContainer> {
                 footer: MyCustomFooter(),
                 child: CustomScrollView(
                   slivers: <Widget>[
-                        // 预加载图片
+                        // Preload images
                         SliverToBoxAdapter(
                           child: Container(
                             height: 0,
@@ -74,32 +73,32 @@ class _HomePageContainerState extends State<HomePageContainer> {
                           ),
                         ),
 
-                        /// 搜索框
+                        /// search bar
                         SliverToBoxAdapter(
                           child: SearchBar(
                               myOntap: (value) => MyNavigator.push(
                                   SearchPage(title: '搜索', keyword: value))),
                         ),
 
-                        /// 顶部轮播图
+                        /// top carousel
                         SliverToBoxAdapter(
                           child: HeadSwiper(
                             bannerList: state.banerList,
                           ),
                         ),
 
-                        /// 商品分类区域
+                        /// Category
                         SliverToBoxAdapter(
                           child: CommodityCateGory(
                               cateGoryList: state.cateGoryList),
                         ),
 
-                        /// 品牌轮播区域
+                        /// Brand carousel area
                         SliverToBoxAdapter(
                           child: BrandSwiper(brandList: state.brandList),
                         ),
 
-                        /// 热销商品区域
+                        /// hotspot area
                       ] +
                       _hotCommodity(state.hotList),
                 ),

@@ -4,7 +4,8 @@ import 'package:AiRi/styles/colors.dart';
 class SearchBar extends StatefulWidget {
   final String keyword;
   final Function myOntap;
-  const SearchBar({Key? key, required this.myOntap, this.keyword = ''}) : super(key: key);
+  const SearchBar({Key? key, required this.myOntap, this.keyword = ''})
+      : super(key: key);
 
   @override
   _SearchBarState createState() => _SearchBarState();
@@ -44,7 +45,7 @@ class _SearchBarState extends State<SearchBar> {
                       height: 15,
                     ),
                     isDense: true,
-                    hintText: "最高可降8000",
+                    hintText: "What you are looking for?",
                     border: InputBorder.none,
                   ),
                 ),
@@ -57,7 +58,7 @@ class _SearchBarState extends State<SearchBar> {
             child: Container(
               padding: EdgeInsets.only(left: 12),
               child: Text(
-                '搜索',
+                'Search',
                 style: TextStyle(
                   color: Color(0xFF17191A),
                   fontSize: 16,

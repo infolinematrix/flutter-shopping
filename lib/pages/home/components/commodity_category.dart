@@ -9,7 +9,8 @@ import '../../../styles/colors.dart';
 
 class CommodityCateGory extends StatelessWidget {
   final List<BrandListElement> cateGoryList;
-  const CommodityCateGory({Key? key, required this.cateGoryList}) : super(key: key);
+  const CommodityCateGory({Key? key, required this.cateGoryList})
+      : super(key: key);
 
   ///////////////////////////////
   List<Widget> _buildGridItem(BuildContext context) {
@@ -21,7 +22,8 @@ class CommodityCateGory extends StatelessWidget {
         GestureDetector(
           onTap: i == cateGoryList.length
               ? () => {mainProvder.setTabBarSelectedIndex = 1}
-              : () => MyNavigator.push(SearchPage(title: cateGoryList[i].name, keyword: cateGoryList[i].name)),
+              : () => MyNavigator.push(SearchPage(
+                  title: cateGoryList[i].name, keyword: cateGoryList[i].name)),
           child: Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +42,7 @@ class CommodityCateGory extends StatelessWidget {
                         ),
                 ),
                 Text(
-                  i == cateGoryList.length ? '更多分类' : cateGoryList[i].name,
+                  i == cateGoryList.length ? 'More..' : cateGoryList[i].name,
                   style: TextStyle(
                     color: AppColors.primaryText,
                     fontSize: 12,

@@ -21,7 +21,7 @@ class OrderItem extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-              Head(), // 头部
+              Head(), // head
             ] +
             [1, 2, 3].map<Widget>((item) {
               return Content();
@@ -32,7 +32,7 @@ class OrderItem extends StatelessWidget {
   }
 }
 
-///顶部供应商
+///top supplier
 class Head extends StatelessWidget {
   const Head({
     Key? key,
@@ -52,7 +52,7 @@ class Head extends StatelessWidget {
             Row(
               children: <Widget>[
                 Text(
-                  '无印良品',
+                  'Muji',
                   style: TextStyle(
                     fontSize: 14.0,
                     fontWeight: FontWeight.w400,
@@ -68,7 +68,7 @@ class Head extends StatelessWidget {
               ],
             ),
             Text(
-              '待支付',
+              'To be paid',
               style: TextStyle(
                 fontSize: 15.0,
                 fontWeight: FontWeight.w400,
@@ -82,7 +82,7 @@ class Head extends StatelessWidget {
   }
 }
 
-/// 订单内容
+/// Order content
 class Content extends StatelessWidget {
   const Content({Key? key}) : super(key: key);
 
@@ -119,7 +119,7 @@ class Content extends StatelessWidget {
               right: 15,
               top: 16,
               child: Text(
-                "客厅卧室单人沙发躺椅简易休闲榻榻米创意日式布艺小沙发",
+                "Living room bedroom single sofa reclining chair simple leisure tatami creative Japanese fabric small sofa",
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
@@ -133,7 +133,7 @@ class Content extends StatelessWidget {
               top: 40,
               right: 15,
               child: Text(
-                '暖灰色 单沙发舒适款90*110cm',
+                'Warm Gray Single Sofa Comfort 90*110cm',
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
@@ -153,7 +153,7 @@ class Content extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 child: Text(
-                  '采购价',
+                  'Purchase price',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 12,
@@ -168,7 +168,7 @@ class Content extends StatelessWidget {
               top: 81.0,
               child: RichText(
                 text: TextSpan(
-                    text: '￥',
+                    text: 'Rs.',
                     style: TextStyle(
                       color: Color(0xFF121212),
                       fontSize: 12,
@@ -377,7 +377,7 @@ class Bottom extends StatelessWidget {
                     onPressed: () => MyNavigator.push(PayPage(orderId: "id")),
                     child: Center(
                       child: Text(
-                        '立即支付',
+                        'pay immediately',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class BottomButton extends StatelessWidget {
   final String? text;
   final Function? handleOk;
-  const BottomButton({Key ?key, this.handleOk, this.text}) : super(key: key);
+  const BottomButton({Key? key, this.handleOk, this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +16,9 @@ class BottomButton extends StatelessWidget {
           left: 10,
           right: 10,
         ),
-        height: 60,
+        height: 50,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            //背景径向渐变
             colors: [AppColors.buttonLine1, AppColors.buttonLine2],
           ),
           borderRadius: BorderRadius.circular(20.0),
@@ -28,7 +27,7 @@ class BottomButton extends StatelessWidget {
           child: Text(
             text!,
             style: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 16,
               fontWeight: FontWeight.w500,
             ),

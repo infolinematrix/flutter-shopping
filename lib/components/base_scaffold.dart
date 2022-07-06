@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:AiRi/components/my_app_bar.dart';
 
@@ -14,7 +13,7 @@ class BaseScaffold extends Scaffold {
       Widget? floatingActionButton,
       Color appBarBackgroundColor = Colors.white,
       Color? titleColor,
-      bool centerTitle = true,
+      bool centerTitle = false,
       FloatingActionButtonLocation? floatingActionButtonLocation})
       : super(
           appBar: appBar ??
@@ -24,8 +23,10 @@ class BaseScaffold extends Scaffold {
                 onWillPop: onWillPop,
                 actions: actions ?? [],
                 centerTitle: centerTitle,
-                title: MyTitle(title ?? '', color: titleColor ?? Colors.grey[800]),
-                backgroundColor: appBarBackgroundColor,
+                title:
+                    MyTitle(title ?? '', color: titleColor ?? Colors.grey[800]),
+                // backgroundColor: appBarBackgroundColor,
+                backgroundColor: Colors.yellow,
               ),
           backgroundColor: Colors.white,
           body: body,

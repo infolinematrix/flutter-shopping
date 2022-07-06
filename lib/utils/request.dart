@@ -144,7 +144,8 @@ class RequestUtil {
     // if (_authorization != null) {
     //   requestOptions = requestOptions.merge(headers: _authorization);
     // }
-    var response = await dio.delete(path, data: params, options: requestOptions);
+    var response =
+        await dio.delete(path, data: params, options: requestOptions);
     return response.data;
   }
 
@@ -157,7 +158,8 @@ class RequestUtil {
     // if (_authorization != null) {
     //   requestOptions = requestOptions.merge(headers: _authorization);
     // }
-    var response = await dio.post(path, data: FormData.fromMap(params), options: requestOptions);
+    var response = await dio.post(path,
+        data: FormData.fromMap(params), options: requestOptions);
     return response.data;
   }
 }
@@ -184,7 +186,7 @@ ErrorEntity createErrorEntity(DioError error) {
 
     case DioErrorType.receiveTimeout:
       {
-        return ErrorEntity(code: -1, message: "响应超时");
+        return ErrorEntity(code: -1, message: "Response Timeout");
       }
     case DioErrorType.response:
       {
@@ -241,7 +243,9 @@ ErrorEntity createErrorEntity(DioError error) {
             default:
               {
                 // return ErrorEntity(code: errCode, message: "未知错误");
-                return ErrorEntity(code: errCode, message: error.response?.statusMessage ?? '');
+                return ErrorEntity(
+                    code: errCode,
+                    message: error.response?.statusMessage ?? '');
               }
           }
         } on Exception catch (_) {

@@ -12,23 +12,24 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  cupertino_icons: ^1.0.3
-  flutter_screenutil: ^5.0.0+2
-  provider: ^5.0.0
+  cupertino_icons: ^1.0.5
+  flutter_screenutil: ^5.5.3+2
+  provider: ^6.0.3
   transparent_image: ^2.0.0
   flutter_swiper_null_safety: ^1.0.2
-  cached_network_image: ^3.0.0
-  webview_flutter: ^2.0.7
-  permission_handler: ^8.0.0+2
-  oktoast: ^3.0.0
-  dio: ^4.0.0
+  cached_network_image: ^3.2.1
+  webview_flutter: ^3.0.4
+  permission_handler: ^10.0.0
+  oktoast: ^3.2.0
+  dio: ^4.0.6
   tuple: ^2.0.0
   pull_to_refresh: ^2.0.0
-  easy_localization: ^3.0.0
-  shared_preferences: ^2.0.5
-  url_launcher: ^6.0.4
-  sqflite: ^2.0.0+3
-  convert: ^3.0.0
+  easy_localization: ^3.0.1
+  shared_preferences: ^2.0.15
+  url_launcher: ^6.1.4
+  sqflite: ^2.0.3
+  convert: ^3.0.2
+  icofont_flutter: ^1.4.0
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,8 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
+    # ICONS
+    - assets/icons/
     # LOGO
     - assets/images/logo.png
     # 导航栏

@@ -20,14 +20,15 @@ class AppColors {
   /// tabBar 激活颜色
   static const Color tabBarActive = Color(0xFF8B63E6);
 
-  /// 分类tab渐变色
-  static Color buttonLine1 = Color(0xFFBA68C8);
+  /// Category tab gradient
+  static Color buttonLine1 = Color.fromARGB(255, 255, 217, 1);
 
   /// 分类tab渐变色
-  static const Color buttonLine2 = Color(0xFF7265E3);
+  static const Color buttonLine2 = Color.fromARGB(255, 223, 219, 0);
 
   /// 主题色
   static const Color primaryColor = Color(0xFF8B63E6);
+  static const Color secondaryColor = Color.fromARGB(255, 255, 217, 0);
 
   static const Color primaryColorAccent = Color(0xFFE1DDF5);
 
